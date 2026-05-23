@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistant de Langue des Signes (LSF)</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Assistant LSF</h1>
+        
+        <div class="input-section">
+            <label for="text-input">Entrez votre texte :</label>
+            <textarea id="text-input" placeholder="Bonjour, comment allez-vous ?"></textarea>
+            
+            <div class="button-group">
+                <button id="btn-translate">Traduire en Signes</button>
+                <button id="btn-audio" class="secondary">🎤 Utiliser l'Audio</button>
+            </div>
+            <div class="mic-feedback">
+                <span id="mic-dot"></span>
+                <span id="mic-status"></span>
+            </div>
+        </div>
+
+        <div id="sign-output">
+            <p style="color: var(--text-secondary)">Votre traduction apparaîtra ici...</p>
+        </div>
+    </div>
+
+    <!-- Data -->
+    <script src="data/dictionary.js?v=1.0.1"></script>
+    <script src="data/alphabet.js?v=1.0.1"></script>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/dictionary.js"></script>
+    <script src="js/fingerspelling.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/speech.js"></script>
+    <script src="js/llm-gloss.js"></script>
+    <script src="js/gloss-mapper.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
